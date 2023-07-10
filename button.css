@@ -1,0 +1,62 @@
+
+.parent{
+    height: 120px;
+    width: 40%;
+    border: 3px solid black;
+    border-radius: 10px;
+    text-align: center;
+    padding: 50px 10px;
+
+}
+.parent p{
+    border: 2px solid black;
+    height: 20px;
+    width: 20%;
+    text-align: center;
+    margin: 0 auto;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+
+   
+
+}
+
+
+.buttons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+}
+
+p:before{
+    content: '';
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    top: 0;
+    left: -50%;
+    background-color: purple;
+    transition: all 2s;
+    z-index: -1;
+}
+p:hover:before{
+    left: 0;
+}
+p:after{
+    content: '';
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    top: 0;
+    right: -50%;
+    background-color: pink;
+    z-index: -1;
+    transition: all 2s;
+}
+p:hover:after{
+    right: 0;
+}
